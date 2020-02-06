@@ -1,0 +1,109 @@
+.header {
+    background-image: url(http://ngo.mps.gov.cn/ngo/ngo/images/top_bg2.png);
+    background-position-x: center;
+    background-position-y: top;
+    background-size: initial;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(36, 57, 104);
+    padding-top: 0px;
+}
+
+.hInner {
+    position: relative;
+    width: 1000px;
+    height: 129px;
+    margin: 0 auto;
+}
+.navWrap {
+    height: 38px;
+    background-image: url(http://ngo.mps.gov.cn/ngo/ngo/images/navbar_bg.png);
+    background-repeat: repeat-x;
+    background-size: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+}
+.navConWrap {
+    position: relative;
+    width: 1000px;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+}
+.navSepotator {
+    width: 1px;
+    height: 36px;
+    background-image: url(http://ngo.mps.gov.cn/ngo/ngo/images/seporator_nav.png);
+    background-position-x: left;
+    background-position-y: center;
+    background-size: initial;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+}
+.navConWrap.navBg {
+    background-image: url(http://ngo.mps.gov.cn/ngo/ngo/images/nav_bg.png);
+    background-position: initial;
+    background-repeat:no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+}
+.curBg {
+    position: absolute;
+    bottom: 0px;
+    width: 95px;
+    height: 33px;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: rbg(255, 0, 0);
+    background-color: #e42e31;
+}
+.navBtn {
+    position: relative;
+    z-index: 10;
+    width: 96px;
+    height: 36px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-image: url(http://ngo.mps.gov.cn/ngo/ngo/images/seporator_nav.png);
+    background-position-x: right;
+    background-position-y: center;
+    background-size: initial;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 36px;
+}
+.main {
+    width: 1000px;
+    min-height: 768px;
+    margin-top: 2px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+
+}
+.rightside {
+    width: 1000px;
+}
+.rightMain {
+    padding-top: 32px;
+    padding-right: 15px;
+    padding-bottom: 0px;
+    padding-left: 15px;
+    background-color: rgb(255,255,255);
+}
+
+.list-group-item {
+    background: #ebebeb;
+    height: 300px;
+}

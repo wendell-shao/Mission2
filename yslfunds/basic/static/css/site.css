@@ -1,0 +1,10 @@
+body {
+    padding: 0px 0 30px;
+    width: 100%;
+    height: 100%;
+    background: #ebebeb;
+}
+
+li.list-group-item {
+    background: #ebebeb;
+}

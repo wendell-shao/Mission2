@@ -1,0 +1,4 @@
+.simditor .simditor-body {
+    overflow: scroll;
+    max-height: 500px;
+}

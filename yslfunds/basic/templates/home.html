@@ -1,0 +1,194 @@
+{% load static %}
+    <div class="container">
+       <div style="height:300px;">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000" style="width:60%;float:left;height:300px;">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item active" id="0">
+                    <img src="{{ latest_article_list.0.image.url }}" alt="First slide"  class="img-responsive center-block" style="height: 300px;">
+                    <div class="carousel-caption">
+                        <h4>{{ latest_article_list.0.title }}</h4>
+                    </div>
+                </div>
+                <div class="item" id="1">
+                    <img  src="{{ latest_article_list.1.image.url }}" alt="Second slide" class="img-responsive center-block" style="height: 300px;">
+                    <div class="carousel-caption">
+                        <h4>{{ latest_article_list.1.title }}</h4>
+                    </div>
+                </div>
+                <div class="item" id="2">
+                    <img src="{{ latest_article_list.2.image.url }}" alt="third slide" class="img-responsive center-block" style="height: 300px;">
+                    <div class="carousel-caption">
+                        <h4>{{ latest_article_list.2.title }}</h4>
+                    </div>
+                </div>
+            </div>
+                <a class="left carousel-control" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+                <a class="right carousel-control" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+        </div>
+            <div sytle="float:left">
+            <ul class="list-group col-sm-4" id="carousel-list" style="width:40%;">
+                <li class="list-group-item show" style="height:300px;">
+                    <h4 class="list-group-item-heading">{{ latest_article_list.0.title }}</h4>
+                    <p class="list-group-item-text">{{ latest_article_list.0.abstract }}</p>
+                    <p><a class="btn btn-primary btn-sm right" href="{% url 'page' slug='articles' sub_slug='news' %}?art_id={{ latest_article_list.0.id }}" role="button">详细内容</a></p>
+                </li>
+                <li class="list-group-item hidden" style="height:300px;">
+                    <h4 class="list-group-item-heading">{{ latest_article_list.1.title }}</h4>
+                    <p class="list-group-item-text">{{ latest_article_list.1.abstract }}</p>
+                    <p><a class="btn btn-primary btn-sm" href="{% url 'page' slug='articles' sub_slug='news' %}?art_id={{ latest_article_list.1.id }}" role="button">详细内容</a></p>
+                </li>
+                <li class="list-group-item hidden" style="height:300px;">
+                    <h4 class="list-group-item-heading">{{ latest_article_list.2.title }}</h4>
+                    <p class="list-group-item-text">{{ latest_article_list.2.abstract }}</p>
+                    <p><a class="btn btn-primary btn-sm" href="{% url 'page' slug='articles' sub_slug='news' %}?art_id={{ latest_article_list.2.id }}" role="button">详细内容</a></p>
+                </li>
+            </ul>
+
+            </div>
+        </div>
+        <div align="center" class="clear"></div>
+        <div class="row">
+            <div class="col-md-4 well">
+                <p>分栏导航</p>
+            </div>
+            <div class="clearfix visible-xs-block"></div>
+            <div class="col-md-8 well">
+                <p>{{ slogan.content | safe}}</p>
+               {% comment %} <ul>
+                    <li>
+                        <h5 class="list-group-item-heading">
+                            <a href="{% url 'page' slug='articles'%}?art_id={{ latest_article_list.0.id }}">{{ latest_article_list.0.title }}</a>
+                        </h5>
+                    </li>
+                    <li>
+                        <h5 class="list-group-item-heading">
+                            <a href="{% url 'page' slug='articles'%}?art_id={{ latest_article_list.1.id }}">{{ latest_article_list.1.title }}</a>
+                        </h5>
+                    </li>
+                    <li>
+                        <h5 class="list-group-item-heading">
+                            <a href="{% url 'page' slug='articles'%}?art_id={{ latest_article_list.2.id }}">{{ latest_article_list.2.title }}</a>
+                        </h5>
+                    </li>
+                </ul>{% endcomment %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 border-primary">
+                <div class="panel panel-info">
+                    <div class="panel-heading">理事会捐赠理念</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading">捐赠活动</div>
+                    <div class="panel-body"><table class="table table-hover" id="dev-table">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>First Name</th>
+								<th>Last Name</th>
+								<th>Username</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Kilgore</td>
+								<td>Trout</td>
+								<td>kilgore</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Bob</td>
+								<td>Loblaw</td>
+								<td>boblahblah</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Holden</td>
+								<td>Caulfield</td>
+								<td>penceyreject</td>
+							</tr>
+						</tbody>
+					</table></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading">原网页地图</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+            </div>
+        </div>
+        <div class="row well">
+            <h3>创始人沈炳麟夫妇与国家领导人合影</h3>
+            <img src="{{ slogan.image.url }}" class="img-responsive center-block" data-toggle="tooltip"
+                 data-placement="top" title="点击放大" id="heying">
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog  modal-lg" style="max-height:100%; height:80%; width:100%">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <img src="{{ slogan.image.url }}" class="img-responsive center-block">
+                        </div>
+{% comment %}                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>{% endcomment %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $('#carouselExampleIndicators').on('slide.bs.carousel', function (ev) {
+                var ev_id = ev.relatedTarget.id
+                switch (ev_id) {
+                    case "0":
+                        $('.list-group li')[0].classList.remove('hidden');
+                        $('.list-group li')[1].classList.add('hidden');
+                        $('.list-group li')[2].classList.add('hidden');
+                        break;
+                    case "1":
+                        $('.list-group li')[1].classList.remove('hidden');
+                        $('.list-group li')[0].classList.add('hidden');
+                        $('.list-group li')[2].classList.add('hidden');
+                        break;
+                    case "2":
+                        $('.list-group li')[2].classList.remove('hidden');
+                        $('.list-group li')[1].classList.add('hidden');
+                        $('.list-group li')[0].classList.add('hidden');
+                        break;
+                    default:
+                        $('.list-group li')[0].classList.add('hidden');
+                        $('.list-group li')[1].classList.add('hidden');
+                        $('.list-group li')[2].classList.add('hidden');
+                }
+            });
+            $(document).ready(function(){
+                $("#heying").click(function(){
+                    $("#myModal").modal();
+
+                });
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+        </script>
+    </div>
